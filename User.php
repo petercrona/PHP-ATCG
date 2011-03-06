@@ -17,7 +17,7 @@ class User {
 	}
 
 	/** Register a user
-	 * @requires \params(string, string, string, boolean)
+	 * @requires \params(string, string, string, boolean) && \validate()
 	 * @ensures \inDB(users, users.username==$username)
 	 */
 	public function register($username, $password, $email, $active) {
@@ -25,7 +25,7 @@ class User {
 	}
 
 	/** Delete a user
-	 * @requires \params(string) && \inDB(users, users.username==$username)
+	 * @requires \params(string) && \inDB(users, users.username==$username) && \validate()
 	 * @ensures \notInDB(users, users.username==$username)
 	 */
 	public function delete($username) {

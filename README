@@ -1,0 +1,7 @@
+Hi! Check Post.php and User.php for examples how this system is used.
+If you want to execute the code just download it to your server and
+start TestGenerator.php.
+
+The system is built for presenting an idea for now. So do not be
+confused by all echoes in the code and that things are only written
+but not performed, even not possible to perform with current code.

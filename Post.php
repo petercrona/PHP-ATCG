@@ -9,7 +9,7 @@ namespace Test;
 class Post {
     
 	/** Add post
-	 * @requires \params(string, string)
+	 * @requires \params(string, string) && \validate()
 	 * @ensures \resultHasType(boolean) && \inDB(posts, posts.title==$title AND posts.category = $category_id)
 	 */
 	public function add($title, $text) {
@@ -17,7 +17,7 @@ class Post {
 	}
 
 	/** Delete post
-	 * @requires \params(int, title) && \inDB(posts, posts.title==$title AND posts.category = $category_id)
+	 * @requires \params(int, title) && \inDB(posts, posts.title==$title AND posts.category = $category_id) && \validate()
 	 * @ensures \notInDB(posts, posts.title==$title AND posts.category = $category_id)
 	 */
 	public function delete($category_id, $title) {

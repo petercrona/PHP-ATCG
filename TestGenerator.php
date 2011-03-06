@@ -10,6 +10,7 @@ require './Tests/ResultHasTypeTest.php';
 require './Tests/InDBTest.php';
 require './Tests/NotInDBTest.php';
 require './Tests/EqualsTest.php';
+require './Tests/ValidateTest.php';
 
 use Test\TestGenerator,
 	Test\Annotations,
