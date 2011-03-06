@@ -14,13 +14,13 @@ class ParamsTest {
 
 			switch ($type) {
 				case 'string':
-					$res = is_int($type);
-					echo '<li>Check if param is string, if so:</li>';
+					$res = is_string($type);
+					echo '<li>Param is string</li>';
 					break;
 
 				case 'int':
 					$res = is_int($type);
-					echo '<li>Check if param is int, if so:</li>';
+					echo '<li>Param is int</li>';
 					break;
 
 			}

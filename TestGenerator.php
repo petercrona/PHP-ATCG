@@ -9,6 +9,7 @@ require './Tests/ResultHasKeysTest.php';
 require './Tests/ResultHasTypeTest.php';
 require './Tests/InDBTest.php';
 require './Tests/NotInDBTest.php';
+require './Tests/EqualsTest.php';
 
 use Test\TestGenerator,
 	Test\Annotations,
@@ -35,11 +36,12 @@ class TestGenerator {
 		$methodTest = '';
 		echo '<h1>Test class ' . $class . '</h1>';
 		foreach($specs as $method => $spec) {
-			echo '<strong>Test method ' . $method . ':</strong><ul>';
-			
+			echo '<h2>Test method ' . $method . ':</h2><ul>';
+			echo '<li>Given that<ul>';
 			$methodTest .= $this->compileAnnotation($spec['requires']);
+			echo '</ul></li></ul><ul><li>Check that</li><ul>';
 			$methodTest .= $this->compileAnnotation($spec['ensures']);
-			echo '</ul>';
+			echo '</ul></li></ul>';
 		}
 	}
 

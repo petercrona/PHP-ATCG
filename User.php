@@ -9,7 +9,7 @@ namespace Test;
 class User {
     
 	/** Login a user
-	 * @requires \params(string, string)
+	 * @requires \params(string, string) && \equals($username, 'hej')
 	 * @ensures \resultHasType(boolean)
 	 */
 	public function login($username, $password) {
