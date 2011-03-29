@@ -8,10 +8,38 @@ class Tokenizer {
 
 	function Tokenizer($code) {
 		$this->code = $code;
+
+		// Clean irrelevant stuff?
 	}
 
-	private function readToken() {
-		// Read one token
+	private function readNextToken() {
+		
+		skipWhitespace();
+		$char = $code[$charPointer];
+		
+		if (endOfCode) {
+			// We're done!
+		}
+
+		else if (ctype_alpha($char)) {
+			// Read a word
+		}
+
+		else if (ctype_digit($char)) {
+			// Read an integer
+		}
+
+		else if ($char == '"') {
+			// Read a string
+		}
+
+		else if (isSymbol()) {
+			// +,-,( and that kind of stuff
+		}
+
+		else {
+			// Illegal char?
+		}
 	}
 
 	private function readAndStoreChar() {
@@ -19,19 +47,23 @@ class Tokenizer {
 	}
 
 	private function readInteger() {
-		// Read one integer
+		// Read integers until symbol
+		// 434+43 || 434 + 4323; (?)
 	}
 
 	private function readSymbol() {
-		// Read one symbol
+		// Read one symbol (shall we support => also?)
+		// > || >= || => || + || -
 	}
 
 	private function readString() {
-		// Read one string
+		// Read chars until "
+		// "hej"
 	}
 
 	private function readWord() {
-		// Read one word, meaning language construct
+		// Read until symbol
+		// while( || while ( || forall i=2..4; a[i] > 4
 	}
 
 
