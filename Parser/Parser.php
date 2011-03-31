@@ -12,8 +12,8 @@ class Parser {
 	public function parseProgram() {
 		$tokenizer = $this->tokenizer;
 		
-		while ($tokenizer->readNextToken() != null) {
-			
+		while ( ($token = $tokenizer->readNextToken()) != null) {
+			echo $token->getType() . ': ' . $token->getValue() . '<br />';
 		}
 	}
 
