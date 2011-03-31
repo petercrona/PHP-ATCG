@@ -11,7 +11,7 @@ class Index
 {
     public static function main()
 	{
-		$tokenizer = new Tokenizer('a > b');
+		$tokenizer = new Tokenizer('a > b > c');
 		$parser = new Parser($tokenizer);
 		
 		$programModel = $parser->parseProgram();

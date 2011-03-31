@@ -5,13 +5,16 @@ class Parser {
 
 	private $tokenizer = null;
 
-	function Parser(Tokenizer $tokenizer) {
+	public function __construct(Tokenizer $tokenizer) {
 		$this->tokenizer = $tokenizer;
 	}
 
 	public function parseProgram() {
+		$tokenizer = $this->tokenizer;
 		
-
+		while ($tokenizer->readNextToken() != null) {
+			
+		}
 	}
 
 	private function parseNormalSpecification() {
